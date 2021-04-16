@@ -10,6 +10,7 @@ import java.util.List;
 * Find cheapest hotel in all hotels list
 * from given date find a cheapest hotel for reservation
 * Add the Weekday and weekend rates for each hotel
+* Add rating to each hotel
 */
 public class HotelRegistration {
 
@@ -44,6 +45,13 @@ public class HotelRegistration {
     /*Add the Weekday and weekend rates for each hotel*/
     public boolean addHotelRating(String hotelName, Double weekday, Double weekend) {
         Hotel hotel = new Hotel(hotelName, weekday);
+        hotelList.add(hotel);
+        return !hotelList.isEmpty();
+    }
+
+    /*Add rating to each hotel*/
+    public boolean addHotelRatings(String hotelName, int ratings) {
+        Hotel hotel = new Hotel(hotelName, (double) ratings);
         hotelList.add(hotel);
         return !hotelList.isEmpty();
     }

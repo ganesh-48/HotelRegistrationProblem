@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.hotelregistration.HotelRegistrationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-04-16T16:58:06" hostname="DESKTOP-GUCTATJ" time="0.053">
+<testsuite name="com.hotelregistration.HotelRegistrationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-04-16T17:34:34" hostname="DESKTOP-GUCTATJ" time="0.054">
   <properties/>
-  <testcase name="givenWeekdayAndWeekendRatesForHotelsWhenAddedShouldReturnTrue()" classname="com.hotelregistration.HotelRegistrationTest" time="0.053"/>
+  <testcase name="givenRatingsForHotelsWhenAddedThenReturnTrue()" classname="com.hotelregistration.HotelRegistrationTest" time="0.054"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

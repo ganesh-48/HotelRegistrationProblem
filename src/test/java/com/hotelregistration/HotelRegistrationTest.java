@@ -48,4 +48,12 @@ public class HotelRegistrationTest {
                              hotelRegistration.addHotelRating("Ridgewood", 220.0, 150.0);
             Assertions.assertTrue(result);
     }
+
+    @Test
+    public void givenRatingsForHotelsWhenAddedThenReturnTrue() {
+            boolean result = hotelRegistration.addHotelRatings("Lakewood", 3) &&
+                             hotelRegistration.addHotelRatings("Bridgewood", 4) &&
+                             hotelRegistration.addHotelRatings("Ridgewood", 5);
+            Assertions.assertTrue(result);
+    }
 }
