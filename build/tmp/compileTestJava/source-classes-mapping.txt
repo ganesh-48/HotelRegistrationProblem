@@ -1,0 +1,2 @@
+com/hotelregistration/HotelRegistrationTest.java
+ com.hotelregistration.HotelRegistrationTest

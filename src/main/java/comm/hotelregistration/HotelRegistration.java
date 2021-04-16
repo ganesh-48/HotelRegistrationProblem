@@ -7,8 +7,16 @@ import java.util.List;
 
 /*@Description-Welcome to the hotel registration problem
 * Add hotel name and rate
+* Find cheapest hotel in all hotels list
+* from given date find a cheapest hotel for reservation
+* Add the Weekday and weekend rates for each hotel
 */
 public class HotelRegistration {
+
+    /*Starting with Welcome to to hotel registration */
+    public static void main(String[] args) {
+        System.out.println("Welcome to hotel registration");
+    }
 
     List<Hotel> hotelList = new ArrayList<>();
     /*Add hotel name and rate
@@ -18,12 +26,7 @@ public class HotelRegistration {
         return hotelList.isEmpty();
     }
 
-
-    /*Starting with Welcome to to hotel registration */
-    public static void main(String[] args) {
-        System.out.println("Welcome to hotel registration");
-    }
-
+    /*find cheapest hotel for a given date range */
     public String findCheapestHotel(Date[] inputDate) {
         ArrayList<Double> cheapRateHotel =  new ArrayList<>();
         for(Hotel hotel : hotelList) {
@@ -36,5 +39,12 @@ public class HotelRegistration {
         Double cheap = cheapRateHotel.stream().min(Comparator.comparing(Double :: doubleValue)).orElse(null);
         int index = cheapRateHotel.indexOf(cheap);
         return hotelList.get(index).getName();
+    }
+
+    /*Add the Weekday and weekend rates for each hotel*/
+    public boolean addHotelRating(String hotelName, Double weekday, Double weekend) {
+        Hotel hotel = new Hotel(hotelName, weekday);
+        hotelList.add(hotel);
+        return !hotelList.isEmpty();
     }
 }

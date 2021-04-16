@@ -13,7 +13,7 @@ public class HotelRegistrationTest {
 
     @Test
     public void givenHotelNameAndRateForRegularCustomerShouldBeTrue() {
-        boolean result = hotelRegistration.addHotel("Sai",955.0);
+        boolean result = hotelRegistration.addHotel("Lakewood",955.0);
         Assertions.assertTrue(result);
     }
 
@@ -34,10 +34,18 @@ public class HotelRegistrationTest {
                 System.out.println("Date is valid");
 
                 boolean result = hotelRegistration.addHotel("Lakewood", 950.0) &&
-                                 hotelRegistration.addHotel("Ridgwood", 1000.0);
+                                 hotelRegistration.addHotel("Ridgewood", 1000.0);
                 if (result)
                     Assertions.assertEquals("Lakewood",hotelRegistration.findCheapestHotel(inputDate));
             }
         }
+    }
+
+    @Test
+    public void givenWeekdayAndWeekendRatesForHotelsWhenAddedShouldReturnTrue() {
+            boolean result = hotelRegistration.addHotelRating("Lakewood", 110.0, 90.0) &&
+                             hotelRegistration.addHotelRating("Bridgewood", 150.0, 50.0) &&
+                             hotelRegistration.addHotelRating("Ridgewood", 220.0, 150.0);
+            Assertions.assertTrue(result);
     }
 }
